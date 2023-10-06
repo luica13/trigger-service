@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.jetbrains'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-quartz:3.1.4'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.1.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation project(':trigger-common')
+    implementation project(':trigger-data')
+    implementation project(':trigger-queue')
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}

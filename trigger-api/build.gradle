@@ -1,0 +1,22 @@
+group = 'org.jetbrains'
+
+apply plugin: 'org.springframework.boot'
+
+springBoot  {
+    mainClass = 'org.jetbrains.Main'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.4'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
+
+    implementation project(":trigger-common")
+    implementation project(":trigger-service")
+
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}

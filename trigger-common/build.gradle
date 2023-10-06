@@ -1,0 +1,12 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.jetbrains'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'org.springframework.boot'
+
+springBoot  {
+    mainClass = 'org.jetbrains.Main'
+}

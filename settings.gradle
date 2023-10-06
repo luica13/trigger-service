@@ -1,0 +1,8 @@
+rootProject.name = 'TriggerService'
+
+include 'trigger-api'
+include 'trigger-service'
+include 'trigger-data'
+include 'trigger-queue'
+include 'trigger-common'
+
